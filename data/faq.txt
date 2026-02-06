@@ -1,0 +1,8 @@
+Q: How do I reset my password?
+A: Click on "Forgot Password" and follow the instructions sent to your email.
+
+Q: How can I track my order?
+A: Go to Orders page and enter your order ID.
+
+Q: What is the refund policy?
+A: Refunds are processed within 5–7 business days.
