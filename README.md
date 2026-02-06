@@ -13,26 +13,6 @@ This project demonstrates how to build a production-style AI customer support sy
 This architecture mirrors how modern AI SaaS platforms are designed.
 
 ---
-
-## High-Level Architecture (Text Diagram)
-
-User / Client
-     |
-     | HTTP (POST /chat)
-     v
-FastAPI Application
-     |
-     |-- Redis (Conversation Memory)
-     |
-     |-- Vector DB (RAG Knowledge Base)
-     |
-     |-- Local LLM (Ollama - phi3:mini)
-     |
-     |-- Prometheus Metrics (/metrics)
-     |
-     v
-AI Response (Context-aware)
-
 ## Tech Stack
 
 | **Component**    | **Technology**               |
@@ -44,6 +24,8 @@ AI Response (Context-aware)
 | Metrics          | Prometheus                   |
 | Language         | Python 3.13                  |
 | Deployment Style | Local / Cloud-ready          |
+
+---
 
 ## Key Features
 - Context-aware answers using RAG
