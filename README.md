@@ -5,9 +5,49 @@ The system provides context-aware responses, conversation memory, and production
 
 ## Project Overview
 This project demonstrates how to build a production-style AI customer support system that:
-    - Answers customer questions using enterprise knowledge (RAG)
-    Maintains conversation history per user using Redis
-    Uses local LLMs (Ollama) — no OpenAI API or billing required
-    Exposes Prometheus-compatible metrics for monitoring
-    Is built using FastAPI, following real backend best practices
+- Answers customer questions using enterprise knowledge (RAG)
+- Maintains conversation history per user using Redis
+- Uses local LLMs (Ollama) — no OpenAI API or billing required
+- Exposes Prometheus-compatible metrics for monitoring
+- Is built using FastAPI, following real backend best practices
 This architecture mirrors how modern AI SaaS platforms are designed.
+
+---
+
+## High-Level Architecture (Text Diagram)
+
+User / Client
+     |
+     | HTTP (POST /chat)
+     v
+FastAPI Application
+     |
+     |-- Redis (Conversation Memory)
+     |
+     |-- Vector DB (RAG Knowledge Base)
+     |
+     |-- Local LLM (Ollama - phi3:mini)
+     |
+     |-- Prometheus Metrics (/metrics)
+     |
+     v
+AI Response (Context-aware)
+
+## Tech Stack
+
+| **Component**    | **Technology**               |
+| ---------------- | ---------------------------- |
+| Backend API      | FastAPI                      |
+| LLM              | Ollama (phi3:mini / mistral) |
+| RAG              | Vector similarity search     |
+| Memory           | Redis                        |
+| Metrics          | Prometheus                   |
+| Language         | Python 3.13                  |
+| Deployment Style | Local / Cloud-ready          |
+
+## Key Features
+- Context-aware answers using RAG
+- User-level memory with Redis
+- Free local AI inference using Ollama
+- Production metrics with Prometheus
+- Clean API design with FastAPI
