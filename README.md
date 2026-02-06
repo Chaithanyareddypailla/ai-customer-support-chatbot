@@ -5,7 +5,7 @@ The system provides context-aware responses, conversation memory, and production
 
 ## Project Overview
 This project demonstrates how to build a production-style AI customer support system that:
-   > Answers customer questions using enterprise knowledge (RAG)
+    - Answers customer questions using enterprise knowledge (RAG)
     Maintains conversation history per user using Redis
     Uses local LLMs (Ollama) — no OpenAI API or billing required
     Exposes Prometheus-compatible metrics for monitoring
